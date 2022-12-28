@@ -1,6 +1,4 @@
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import VocabularyCard from '../components/VocabularyCard';
 import Link from 'next/link';
 import VocabularySample from '../components/VocabularySample';
 
@@ -55,7 +53,7 @@ export default function Home({randomVocabulary, n5Sample, n4Sample, n3Sample, n2
 }
 
 
-export const getStaticProps = async() => {
+export const getServerSideProps = async() => {
   const res = await fetch(`https://jlpt-vocab-api.vercel.app/api/words/random`)
   const data = await res.json()
 
@@ -83,3 +81,4 @@ export const getStaticProps = async() => {
     n1Sample: n1data.words,
    } }
 }
+
