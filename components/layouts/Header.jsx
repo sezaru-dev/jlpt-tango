@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <header className='fixed top-0 left-0 right-0 z-50 bg-gray-800'>
       <div className="relative max-w-[1440px] px-5 md:px-10 mx-auto h-16 bg-gray-800 flex items-center justify-between z-40">
-        <Link href={`/`}>
+        <Link href={`/`} onClick={linkClickHandler}>
           <h1 className='font-bold text-gray-200'>JLPT Tango<span className='text-rose-500 font-notoSansJP'>単語</span></h1>
         </Link>
         <nav className='hidden md:block'>
